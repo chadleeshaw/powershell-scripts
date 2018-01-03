@@ -56,13 +56,13 @@ $datacenter = ('DC1','DC2','DC3') | Out-GridView -Title "Pick the Datacenter" -O
  
 if ($datacenter -eq "DC1") {
     sPrint -Type 1 "Datacenter is set to: $datacenter"
-    $HVHosts = $SE_Hosts
+    $HVHosts = $DC1_Hosts
 } ElseIF ($datacenter -eq "DC2"
     sPrint -Type 1 "Datacenter is set to: $datacenter"
-    $HVHosts = $SW_Hosts
+    $HVHosts = $DC2_Hosts
 } ElseIF ($datacenter -eq "DC3") {
     sPrint -Type 1 "Datacenter is set to: $datacenter"
-    $HVHosts = $TP_Hosts
+    $HVHosts = $DC3_Hosts
 } Else {
     sPrint -Type 0 "Error selecting Datacenter"
     break
